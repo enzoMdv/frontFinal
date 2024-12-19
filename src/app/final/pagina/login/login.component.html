@@ -1,0 +1,45 @@
+
+<div class="bg-dark d-flex justify-content-center align-items-center vh-100">
+  <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+    <div class="d-flex justify-content-center">
+        <img src="assets/login-icon.svg" alt="login-icon" style="height: 7rem"/>
+    </div>
+    <div class="text-center fs-1 fw-bold">Login</div>
+    <form id="loginForm" method="post">
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="dni">Dni:</label>
+        <input [(ngModel)]="dni" type="dni" id="dni" class="form-control" name="Dni" placeholder="Ingrese su dni" required />
+      </div>
+  
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="contraseha">Contraseña:</label>
+        <input [(ngModel)]="contraseha" type="password" id="contraseha" class="form-control" name="contraseha" placeholder="Ingrese su contraseña" required />
+      </div>
+        <div class="d-flex justify-content-around mt-1">
+            <div class="d-flex align-items-center gap-1">
+                <input class="form-check-input" type="checkbox"/>
+                <div class="pt-1" style="font-size: 0.9rem">Recuérdame</div>
+            </div>
+            <div class="pt-1">
+                <a href="#" class="text-decoration-none text-dark fw-semibold fst-italic" style="font-size: 0.9rem">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+        <button (click)="login()" type="button" class="btn btn-dark text-white w-100 mt-4 fw-semibold shadow-sm">Login</button>
+        <div id="error-msg" style="color:red;"></div>
+    </form>
+    <div class="d-flex gap-1 justify-content-center mt-1">
+        <div>"¿No tienes una cuenta?</div>
+        <button (click)="registro()" class="text-decoration-none text-dark fw-white fst-italic">Regístrate</button>
+    </div>
+    <div class="p-3">
+        <div class="border-bottom text-center" style="height: 0.9rem">
+            <span class="bg-white px-3">o</span>
+        </div>
+    </div>
+    <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+        <img src="assets/google-icon.svg" alt="google-icon" style="height: 1.6rem"/>
+        <div class="fw-semibold text-secondary">Continua con Google</div>
+    </div>
+</div>
+</div>
